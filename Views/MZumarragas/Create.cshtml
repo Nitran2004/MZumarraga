@@ -1,0 +1,48 @@
+﻿@model MZumarraga.Models.MZumarraga
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MZumarraga</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EADecimal" class="control-label"></label>
+                <input asp-for="EADecimal" class="form-control" />
+                <span asp-validation-for="EADecimal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EAString" class="control-label"></label>
+                <input asp-for="EAString" class="form-control" />
+                <span asp-validation-for="EAString" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EABool" /> @Html.DisplayNameFor(model => model.EABool)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="EAFecha" class="control-label"></label>
+                <input asp-for="EAFecha" class="form-control" />
+                <span asp-validation-for="EAFecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MZumarraga.Models.MZumarraga>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EADecimal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EAString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EABool)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EAFecha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EADecimal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EAString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EABool)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EAFecha)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EANumero">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EANumero">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EANumero">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

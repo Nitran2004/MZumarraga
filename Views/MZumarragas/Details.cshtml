@@ -1,0 +1,42 @@
+﻿@model MZumarraga.Models.MZumarraga
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MZumarraga</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EADecimal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EADecimal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EAString)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EAString)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EABool)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EABool)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EAFecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EAFecha)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.EANumero">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
